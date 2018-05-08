@@ -26,13 +26,14 @@ var customerDAO = {
     },
 
     register: function (customer, callback) {
+        console.log(customer);
         var username = customer.username;
         var password = customer.password;
-        var firstName = customer.firstName;
-        var lastName = customer.lastName;
-        var name = customer.name;
-        var phone = customer.phone;
-        var email = customer.email;
+        var firstName = customer.customer_first_name;
+        var lastName = customer.customer_last_name;
+        var name = customer.customer_name;
+        var phone = customer.customer_phone;
+        var email = customer.customer_email;
         var introKey = randomString.generate(10).toUpperCase();
 
         getCustomerByUsername(username, function (results) {
